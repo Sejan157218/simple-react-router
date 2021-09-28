@@ -7,6 +7,7 @@ import Pagenotfround from './Components/Pagenotfround/Pagenotfround';
 import Friends from './Components/Friends/Friends';
 import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
 import Header from './Components/Header/Header';
+import FriendDetails from './Components/FriendDetails/FriendDetails';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path="/friends">
         <Friends></Friends>
+        </Route>
+        <Route path="/friend/:friendID">
+        <FriendDetails></FriendDetails>
         </Route>
         <Route path="/contact" >
         <Contact></Contact>
