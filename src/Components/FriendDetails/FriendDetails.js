@@ -25,7 +25,7 @@ const FriendDetails = () => {
             <p>Email me : {email}</p>
             <p>Visit me : {website}</p>
             <p>I live In : {address?.street}</p>
-            <button onClick={handlerAllFriends}>see all friend</button>
+            <button onClick={handlerAllFriends}>see allfriend</button>
         </div>
     );
 };
