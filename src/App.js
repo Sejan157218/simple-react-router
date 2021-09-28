@@ -5,33 +5,38 @@ import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import Pagenotfround from './Components/Pagenotfround/Pagenotfround';
 import Friends from './Components/Friends/Friends';
-// import { BrowserRouter,Switch,Route } from 'react-router-dom';
+import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
+import Header from './Components/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <Friends></Friends>
-
-
-      {/* <BrowserRouter>
+      <Router>
+        <Header></Header>
       <Switch>
+
+      <Route exact path="/" >
+        <Home></Home>
+        </Route>
         <Route path="/home" >
         <Home></Home>
         </Route>
         <Route path="/about" >
         <About></About>
         </Route>
+        <Route path="/friends">
+        <Friends></Friends>
+        </Route>
         <Route path="/contact" >
         <Contact></Contact>
         </Route>
-        <Route exact path="/" >
-        <Home></Home>
-        </Route>
-        <Route>
+        <Route path = "*">
         <Pagenotfround></Pagenotfround>
         </Route>
+
+
       </Switch>
-      </BrowserRouter> */}
+      </Router>
     </div>
   );
 }
